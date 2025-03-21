@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input 
+      placeholder="搜索日期/类型/备注" 
+      bindinput="onSearch"
+      value="{{searchKeyword}}"
+      class="search-input"
+    />
+  </view>
+
+  <!-- 账单列表 -->
+  <scroll-view 
+    scroll-y
+    class="bill-list"
+    bindscrolltolower="loadMore"
+  >
+    <view wx:if="{{bills.length === 0}}" class="empty-tip">
+      暂无账单记录，点击右下角+号添加
+    </view>
+
+    <view 
+      wx:for="{{bills}}"
+      wx:key="id"
+      class="bill-item"
+      data-index="{{index}}"
+      bindtouchstart="touchStart"
+      bindtouchend="touchEnd"
+    >
+      <!-- 滑动操作层 -->
+      <view class="slide-actions" style="transform: translateX({{item.slideOffset}}rpx)">
+        <view class="action-delete" bindtap="handleDelete">删除</view>
+      </view>
+
+      <!-- 内容展示层 -->
+      <view class="bill-content">
+        <view class="bill-header">
+          <text class="date">{{item.date}}</text>
+          <text class="type {{item.amount < 0 ? 'expense' : 'income'}}">
+            {{item.type}}
+          </text>
+        </view>
+        <view class="bill-body">
+          <text class="amount {{item.amount < 0 ? 'expense' : 'income'}}">
+            {{item.amount}}
+          </text>
+          <text class="remark" wx:if="{{item.remark}}">{{item.remark}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{loading}}" class="loading-tip">加载中...</view>
+  </scroll-view>
+
+  <!-- 悬浮添加按钮 -->
+  <image 
+    src="/assets/icon-add.png" 
+    class="add-button" 
+    bindtap="gotoCreate"
+    mode="widthFix"
+  />
+</view>

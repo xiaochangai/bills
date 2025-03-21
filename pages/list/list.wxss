@@ -1,0 +1,64 @@
+.fab {
+  position: fixed;
+  right: 30rpx;
+  bottom: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #07c160;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.15);
+}
+
+.fab-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+/* 账单列表项样式 */
+.bill-item {
+  position: relative;
+  margin-bottom: 20rpx;
+  background: white;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.slide-actions {
+  position: absolute;
+  right: -200rpx;
+  width: 200rpx;
+  height: 100%;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.action-delete {
+  width: 100%;
+  background: #ee0a24;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.income {
+  color: #07c160;
+}
+
+.expense {
+  color: #ee0a24;
+}
+
+.bill-content {
+  padding: 30rpx;
+  transition: transform 0.3s ease;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #888;
+  padding: 40rpx;
+}
