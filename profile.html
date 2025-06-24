@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <title>个人中心 - 个人记账网站</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+  <style>html,body{width:1440px;height:900px;overflow:hidden;}::-webkit-scrollbar{display:none;}</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <nav class="flex items-center justify-between px-8 py-4 bg-white/80 shadow-sm rounded-b-xl">
+    <div class="flex items-center space-x-4">
+      <i class="fas fa-coins text-2xl text-blue-600"></i>
+      <span class="font-bold text-xl">个人中心</span>
+    </div>
+    <div class="flex-1 mx-8">
+      <input type="text" placeholder="搜索账单/分类..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+    </div>
+    <div class="flex items-center space-x-6">
+      <button class="hover:bg-gray-100 p-2 rounded-lg"><i class="fas fa-user text-xl"></i></button>
+      <button class="hover:bg-gray-100 p-2 rounded-lg"><i class="fas fa-cog text-xl"></i></button>
+      <div class="relative group">
+        <button class="hover:bg-gray-100 p-2 rounded-lg"><i class="fas fa-ellipsis-v text-xl"></i></button>
+        <div class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-10">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">个人中心</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">退出登录</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="p-8 grid grid-cols-2 gap-8">
+    <section class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
+      <h3 class="text-lg font-semibold mb-4">账户信息</h3>
+      <div class="w-full space-y-4">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-user-circle text-4xl text-gray-400"></i>
+          <div>
+            <div class="font-bold">用户名：张三</div>
+            <div class="text-gray-500 text-sm">邮箱：zhangsan@email.com</div>
+          </div>
+        </div>
+        <button class="w-full py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition">修改个人信息</button>
+      </div>
+    </section>
+    <section class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
+      <h3 class="text-lg font-semibold mb-4">安全设置</h3>
+      <div class="w-full space-y-4">
+        <div class="flex items-center justify-between">
+          <span>MFA二次验证</span>
+          <button class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition">已开启</button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>修改密码</span>
+          <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">去修改</button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>退出登录</span>
+          <button class="px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition">退出</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <title>新增/编辑账单 - 个人记账网站</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+  <style>html,body{width:1440px;height:900px;overflow:hidden;}::-webkit-scrollbar{display:none;}</style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-lg bg-white rounded-2xl shadow-xl p-10">
+    <h2 class="text-2xl font-bold text-center mb-6">新增/编辑账单</h2>
+    <form class="space-y-4">
+      <div class="flex space-x-4">
+        <button type="button" class="flex-1 py-3 rounded-lg border border-blue-500 text-blue-600 font-semibold hover:bg-blue-50 focus:bg-blue-100 transition">收入</button>
+        <button type="button" class="flex-1 py-3 rounded-lg border border-red-500 text-red-600 font-semibold hover:bg-red-50 focus:bg-red-100 transition">支出</button>
+      </div>
+      <input type="number" placeholder="金额" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" required>
+      <input type="text" placeholder="分类（如：餐饮、交通、工资）" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" required>
+      <input type="text" placeholder="备注（选填）" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+      <input type="date" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" required>
+      <div class="flex justify-end space-x-4 mt-6">
+        <button type="button" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">取消</button>
+        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">保存</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
