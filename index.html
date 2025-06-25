@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账系统 - 首页</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen p-4">
+    <div class="container mx-auto">
+        <!-- 顶部导航 -->
+        <div class="glass-effect p-4 mb-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">个人记账系统</h1>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-purple-200"><i class="fas fa-bell"></i></a>
+                <a href="#" class="text-white hover:text-purple-200"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+
+        <!-- 概览卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="glass-effect p-6 text-white">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-wallet text-xl mr-2"></i>
+                    <h3 class="text-lg font-semibold">本月支出</h3>
+                </div>
+                <p class="text-3xl font-bold">¥3,245.00</p>
+                <p class="text-sm opacity-80">较上月增加12%</p>
+            </div>
+            <div class="glass-effect p-6 text-white">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-coins text-xl mr-2"></i>
+                    <h3 class="text-lg font-semibold">本月收入</h3>
+                </div>
+                <p class="text-3xl font-bold">¥8,500.00</p>
+                <p class="text-sm opacity-80">较上月减少5%</p>
+            </div>
+            <div class="glass-effect p-6 text-white">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-piggy-bank text-xl mr-2"></i>
+                    <h3 class="text-lg font-semibold">账户余额</h3>
+                </div>
+                <p class="text-3xl font-bold">¥24,780.50</p>
+                <p class="text-sm opacity-80">总资产</p>
+            </div>
+        </div>
+
+        <!-- 功能入口 -->
+        <div class="glass-effect p-6">
+            <h2 class="text-xl font-semibold text-white mb-4">快捷入口</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="nav-item glass-effect p-4 text-center text-white hover:bg-white hover:bg-opacity-20 rounded-lg">
+                    <i class="fas fa-plus-circle text-2xl mb-2"></i>
+                    <p>新增账单</p>
+                </a>
+                <a href="#" class="nav-item glass-effect p-4 text-center text-white hover:bg-white hover:bg-opacity-20 rounded-lg">
+                    <i class="fas fa-list-alt text-2xl mb-2"></i>
+                    <p>账单列表</p>
+                </a>
+                <a href="#" class="nav-item glass-effect p-4 text-center text-white hover:bg-white hover:bg-opacity-20 rounded-lg">
+                    <i class="fas fa-chart-pie text-2xl mb-2"></i>
+                    <p>统计分析</p>
+                </a>
+                <a href="#" class="nav-item glass-effect p-4 text-center text-white hover:bg-white hover:bg-opacity-20 rounded-lg">
+                    <i class="fas fa-cog text-2xl mb-2"></i>
+                    <p>个人设置</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 最近账单 -->
+        <div class="glass-effect p-6 mt-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-white">最近账单</h2>
+                <a href="#" class="text-sm text-purple-200 hover:underline">查看全部</a>
+            </div>
+            <div class="space-y-3">
+                <div class="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
+                    <div>
+                        <p class="text-white font-medium">餐饮</p>
+                        <p class="text-sm text-gray-200">昨天 18:30 · 海底捞</p>
+                    </div>
+                    <p class="text-red-300 font-bold">-¥198.00</p>
+                </div>
+                <div class="flex justify-between items-center p-3 bg-white bg-opacity-10 rounded-lg">
+                    <div>
+                        <p class="text-white font-medium">工资收入</p>
+                        <p class="text-sm text-gray-200">本月5日 · 公司</p>
+                    </div>
+                    <p class="text-green-300 font-bold">+¥8,500.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
